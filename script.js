@@ -1,10 +1,7 @@
 finalPrice = 0;
 do {
-    kindOfBun = prompt(`Hamburger or Cheeseburger?`).replaceAll(` `, ``).toLowerCase(); // Запрашиваем у юзера вид булки `Hamburger or Cheeseburger`.
+    kindOfBun = String(prompt(`Hamburger or Cheeseburger?`)).replaceAll(` `, ``).toLowerCase(); // Запрашиваем у юзера вид булки `Hamburger or Cheeseburger`.
 } while (kindOfBun !== `hamburger` && kindOfBun !== `cheeseburger`); // 1.3 Если юзер ввел не Hamburger, и не Cheeseburger, то продолжаем запрашивать название булки до тех пор, пока юзер не введет либо Hamburger, либо Cheeseburger.
-
-console.log(kindOfBun);
-console.log(finalPrice);
 
 if (kindOfBun === `hamburger`) {
     kindOfBun = `Hamburger`;
@@ -24,7 +21,7 @@ if (kindOfBun === `hamburger`) {
 potato = confirm(`Would you like potato?`); // 2. ПрCheeseburgerедлагаем пользователю добавить к заказу картошку `Would you like potato?`.
 
 if (potato) {
-    potato = prompt(`Choose potato size: small/middle/big`).replaceAll(` `, ``).toLowerCase(); // 2.1. Если пользователь соглашается на картошку, то предлагаем ему выбрать ее размер `Choose potato size: small/middle/big`:
+    potato = String(prompt(`Choose potato size: small/middle/big`)).replaceAll(` `, ``).toLowerCase(); // 2.1. Если пользователь соглашается на картошку, то предлагаем ему выбрать ее размер `Choose potato size: small/middle/big`:
 
     switch (potato) {
         case `middle`:
@@ -48,7 +45,7 @@ if (potato) {
 sauce = confirm(`Would you like sauce?`); // 3. Предлагаем пользователю добавить к заказу соус `Would you like sauce?`.
 
 if (sauce) {
-    sauce = prompt(`Choose sauce: ketchup/mayonnaise`).replaceAll(` `, ``).toLowerCase(); // 3.1. Если пользователь соглашается на соус, то предлагаем ему выбрать его тип `Choose sauce: ketchup/mayonnaise`:
+    sauce = String(prompt(`Choose sauce: ketchup/mayonnaise`)).replaceAll(` `, ``).toLowerCase(); // 3.1. Если пользователь соглашается на соус, то предлагаем ему выбрать его тип `Choose sauce: ketchup/mayonnaise`:
 
     finalPrice += 10;
 
